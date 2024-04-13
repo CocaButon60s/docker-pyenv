@@ -1,4 +1,4 @@
-FROM FROM tensorflow/tensorflow:latest-gpu
+FROM tensorflow/tensorflow:latest-gpu
 
 RUN <<EOL
 ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
