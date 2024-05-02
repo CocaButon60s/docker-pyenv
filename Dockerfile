@@ -10,4 +10,14 @@ git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
 echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+
+# install pyenv-update
+git clone https://github.com/pyenv/pyenv-update.git ~/.pyenv/plugins/pyenv-update
+
+# others
+apt install -y neovim sudo
+git config --global alias.st status
+git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.ci commit
 EOL
