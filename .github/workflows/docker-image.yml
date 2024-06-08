@@ -8,13 +8,14 @@ on:
 jobs:
 
   build:
-
     runs-on: ubuntu-latest
-
+    env:
+      USER_NAME: CocaButon60s
+      IMG_NAME: ghcr.io/$USER_NAME/pyenv:latest
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
       run: |
-        docker login -u scotch190 -p ${{ secrets.DOCKER_PSWD }}
-        docker build -t scotch190/pyenv:latest .
-        docker push scotch190/pyenv:latest
+        docker login ghcr.io -u $USER_NAME -p ${{secrets.PAT_CLASSIC}}
+        docker build -t $IMG_NAME .
+        docker push $IMG_NAME
