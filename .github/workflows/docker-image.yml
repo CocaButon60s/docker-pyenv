@@ -13,8 +13,8 @@ jobs:
     - uses: actions/checkout@v4
     - name: Build the Docker image
       env:
-        USR_NAME: cocabuton60s/pyenv:latest
-        IMG_NAME: CocaButon60s/pyenv:latest
+        USR_NAME: CocaButon60s
+        IMG_NAME: cocabuton60s/pyenv:latest
       run: |
         echo ${{secrets.PAT_CLASSIC}} | docker login ghcr.io -u $USR_NAME --password-stdin
         docker build -t $IMG_NAME .
