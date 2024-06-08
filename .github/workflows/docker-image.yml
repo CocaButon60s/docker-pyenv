@@ -10,12 +10,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      USER_NAME: CocaButon60s
-      IMG_NAME: ghcr.io/$USER_NAME/pyenv:latest
+      USR_NAME: CocaButon60s
+      IMG_NAME: $USR_NAME/pyenv:latest
+
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
       run: |
-        echo ${{secrets.PAT_CLASSIC}} | docker login ghcr.io -u $USER_NAME --password-stdin
+        echo ${{secrets.PAT_CLASSIC}} | docker login ghcr.io -u $USR_NAME --password-stdin
         docker build -t $IMG_NAME .
-        docker push $IMG_NAME
+        docker push ghcr.io/$IMG_NAME
