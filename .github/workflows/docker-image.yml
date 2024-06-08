@@ -9,13 +9,12 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
-    env:
-      USR_NAME: CocaButon60s
-      IMG_NAME: $USR_NAME/pyenv:latest
-
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
+      env:
+        USR_NAME: CocaButon60s
+        IMG_NAME: $USR_NAME/pyenv:latest
       run: |
         echo $USR_NAME
         echo $IMG_NAME
