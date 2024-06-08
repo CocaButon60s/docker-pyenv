@@ -1,4 +1,5 @@
 FROM tensorflow/tensorflow:latest-gpu
+LABEL org.opencontainers.image.source=https://github.com/CocaButon60s/docker-pyenv
 
 RUN <<EOL
 ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
