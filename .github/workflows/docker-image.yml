@@ -14,8 +14,8 @@ jobs:
     - name: Build the Docker image
       env:
         USR_NAME: CocaButon60s
-        IMG_NAME: cocabuton60s/pyenv:latest
+        IMG_NAME: ghcr.io/cocabuton60s/pyenv:latest
       run: |
         echo ${{secrets.PAT_CLASSIC}} | docker login ghcr.io -u $USR_NAME --password-stdin
         docker build -t $IMG_NAME .
-        docker push ghcr.io/$IMG_NAME
+        docker push $IMG_NAME
