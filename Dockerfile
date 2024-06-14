@@ -12,8 +12,9 @@ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
 echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(pyenv init -)"' >> ~/.bashrc
 
-# install pyenv-update
+# update pyenv
 git clone https://github.com/pyenv/pyenv-update.git ~/.pyenv/plugins/pyenv-update
+~/.pyenv/bin/pyenv update
 
 # others
 apt install -y neovim sudo
