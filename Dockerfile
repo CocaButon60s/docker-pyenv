@@ -17,7 +17,6 @@ git clone https://github.com/pyenv/pyenv-update.git ~/.pyenv/plugins/pyenv-updat
 ~/.pyenv/bin/pyenv update
 
 # others
-apt install -y neovim sudo
 git config --global alias.st status
 git config --global alias.co checkout
 git config --global alias.br branch
