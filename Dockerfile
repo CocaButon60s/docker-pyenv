@@ -14,7 +14,6 @@ echo 'eval "$(pyenv init -)"' >> ~/.bashrc
 
 # update pyenv
 git clone https://github.com/pyenv/pyenv-update.git ~/.pyenv/plugins/pyenv-update
-~/.pyenv/bin/pyenv update
 
 # others
 git config --global alias.st status
