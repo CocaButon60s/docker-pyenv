@@ -21,3 +21,14 @@ git config --global alias.co checkout
 git config --global alias.br branch
 git config --global alias.ci commit
 EOL
+
+COPY --chmod=744 <<EOF entrypoint.sh
+#!/bin/bash
+
+PATH=\$PATH:~/.pyenv/bin
+pyenv update
+
+echo -e '\\e[32mFIN\\e[m'
+sleep infinity
+EOF
+ENTRYPOINT [ "/entrypoint.sh" ]
